@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yale Symposium on Machine Learning across Modalities</title>
+  <meta name="description" content="YSMLM Workshop @ Yale — Advancing Multi-modal AI Frameworks." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --brand: #0ea5e9; /* sky-500 */
+      --ink: #0b1324;  /* custom dark */
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif; color: #0b1324; }
+    .prose h2 { scroll-margin-top: 96px; }
+    .glass { backdrop-filter: blur(10px); background: rgba(255, 255, 255, 0.6); }
+  </style>
+</head>
+<body class="bg-slate-50">
+  <!-- Sticky Header -->
+  <header class="sticky top-0 z-50 glass border-b border-slate-200">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 items-center justify-between">
+        <a href="#home" class="flex items-center gap-3 font-semibold text-slate-800">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-sky-500 text-white font-bold">N</span>
+          <span class="hidden sm:block">YSMLM Workshop @ Yale 2026</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="#event" class="hover:text-sky-600">Event</a>
+          <a href="#news" class="hover:text-sky-600">News</a>
+          <a href="#cfp" class="hover:text-sky-600">Call</a>
+          <a href="#timeline" class="hover:text-sky-600">Dates</a>
+          <a href="#schedule" class="hover:text-sky-600">Schedule</a>
+          <a href="#organizers" class="hover:text-sky-600">Organizers</a>
+          <a href="#speakers" class="hover:text-sky-600">Speakers</a>
+          <a href="#faq" class="hover:text-sky-600">FAQ</a>
+          <a href="#contact" class="hover:text-sky-600">Contact</a>
+          <a href="#sponsor" class="hover:text-sky-600">Sponsor</a>
+        </nav>
+        <div class="md:hidden">
+          <button id="menuBtn" class="inline-flex items-center justify-center rounded-md border border-slate-300 px-3 py-2 text-slate-700 hover:bg-white">
+            Menu
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 py-3 grid grid-cols-2 gap-4 text-sm">
+        <a href="#event" class="hover:text-sky-600">Event</a>
+        <a href="#news" class="hover:text-sky-600">News</a>
+        <a href="#cfp" class="hover:text-sky-600">Call</a>
+        <a href="#timeline" class="hover:text-sky-600">Dates</a>
+        <a href="#schedule" class="hover:text-sky-600">Schedule</a>
+        <a href="#organizers" class="hover:text-sky-600">Organizers</a>
+        <a href="#speakers" class="hover:text-sky-600">Speakers</a>
+        <a href="#faq" class="hover:text-sky-600">FAQ</a>
+        <a href="#contact" class="hover:text-sky-600">Contact</a>
+        <a href="#sponsor" class="hover:text-sky-600">Sponsor</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden bg-gradient-to-br from-white via-sky-50 to-slate-100">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-7">
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900">
+            Yale Symposium on Machine Learning across Modalities
+          </h1>
+          <p class="mt-6 text-slate-700 leading-relaxed">
+            Join us in New Haven, CT, USA, <span class="font-semibold">February startdata–enddate, 2026</span>, for a deep dive into
+            Multi-modal representation learning and foundation models.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="https://openreview.net/xyz" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg bg-sky-600 px-4 py-2 text-white hover:bg-sky-700">
+              Submit on XYZ
+              <span aria-hidden>↗</span>
+            </a>
+            <a href="#cfp" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-4 py-2 text-slate-800 hover:bg-white">
+              Call for Contributions
+            </a>
+            <a href="https://join.slack.com" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-4 py-2 text-slate-800 hover:bg-white">
+              Join the Slack
+              <span aria-hidden>↗</span>
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="relative rounded-2xl bg-white shadow-xl p-6">
+            <div class="text-sm text-slate-500">Event</div>
+            <div class="mt-2 text-lg font-semibold text-slate-800">Yale University •  New Haven, CT • Feb startdate–enddate</div>
+            <ul class="mt-4 space-y-2 text-slate-700 text-sm">
+              <li>Format: <strong>Invited Talks • Posters • Panel</strong></li>
+            </ul>
+            <a href="#schedule" class="mt-6 inline-flex items-center justify-center w-full rounded-lg bg-slate-900 text-white px-4 py-2 hover:bg-slate-800">See Schedule</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Event intro -->
+  <section id="event" class="py-16">
+    <div class="mx-auto max-w-4xl px-4">
+      <div class="prose prose-slate">
+        <p>
+        Machine learning's progress with isolated modalities—text, vision, audio—masks a fundamental gap: intelligence emerges from integrating diverse data sources. Developing unified models that reason coherently across modalities remains one of AI's defining challenges.
+        </p>
+        <p>
+        Multimodal learning bridges this gap by enabling systems to jointly learn from and align information across heterogeneous data sources. This paradigm promises richer representations, stronger generalization, and more robust reasoning—with implications for science, healthcare, robotics, and human-centered AI.
+        </p>
+        <p>
+        This workshop brings together researchers and practitioners exploring the foundations and frontiers of multimodal intelligence. We seek to spark cross-disciplinary discussion on architectures, alignment strategies, and applications that will shape the future of AI systems that understand the world as we do.
+        </p>
+    </div>
+    </div> 
+  </section>
+
+  <!-- News -->
+  <section id="news" class="py-16 bg-white border-y border-slate-200">
+    <div class="mx-auto max-w-5xl px-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold">News</h2>
+        <a href="#" class="text-sky-700 hover:underline text-sm">RSS</a>
+      </div>
+      <ul class="mt-6 space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="text-xs font-semibold text-slate-500 whitespace-nowrap">yyyy-mm-dd</span>
+          <p class="text-slate-800">We are accepting papers for oral and poster presentations. See the <a href="#cfp" class="text-sky-700 underline">Call for Contributions</a>.</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-xs font-semibold text-slate-500 whitespace-nowrap">yyyy-mm-dd</span>
+          <p class="text-slate-800">Interested in reviewing? Fill out the reviewer nomination form by Aug 24.</p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-xs font-semibold text-slate-500 whitespace-nowrap">—</span>
+          <p class="text-slate-800">Submission site: <a class="text-sky-700 underline" href="https://openreview.net/ysmlm" target="_blank" rel="noopener">OpenReview</a>. Join our <a href="https://join.slack.com" class="text-sky-700 underline" target="_blank" rel="noopener">Slack</a>.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Call for Contributions -->
+  <section id="cfp" class="py-16">
+    <div class="mx-auto max-w-5xl px-4">
+      <h2 class="text-2xl font-bold">2. Call for Contributions (Topics & Scope)</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+          <h3 class="font-semibold">Theoretical Foundations</h3>
+          <ul class="mt-3 list-disc pl-5 text-slate-700 text-sm leading-6">
+            <li>Principles of multimodal alignment and representation learning</li>
+            <li>Information-theoretic perspectives on cross-modal fusion</li>
+            <li>Modeling inter-modal dependencies and disentanglement</li>
+            <li>Foundations of transfer, generalization, and scaling across modalities</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+          <h3 class="font-semibold">Architectures & Algorithms</h3>
+          <ul class="mt-3 list-disc pl-5 text-slate-700 text-sm leading-6">
+            <li>Multimodal transformers, diffusion models, and joint encoders</li>
+            <li>Cross-attention, alignment, and fusion mechanisms</li>
+            <li>Contrastive and generative approaches for multi-sensor data</li>
+            <li>Learning shared latent spaces across modalities</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+          <h3 class="font-semibold">Applications</h3>
+          <ul class="mt-3 list-disc pl-5 text-slate-700 text-sm leading-6">
+            <li>Vision–language and audio–language understanding</li>
+            <li>Multimodal reasoning in healthcare, robotics, and science</li>
+            <li>Cross-modal retrieval, grounding, and embodied AI</li>
+            <li>Learning with missing or weakly paired modalities</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-xl border border-slate-200 p-6 shadow-sm">
+          <h3 class="font-semibold">Trustworthiness & Tools</h3>
+          <ul class="mt-3 list-disc pl-5 text-slate-700 text-sm leading-6">
+            <li>Bias, fairness, and interpretability in multimodal models</li>
+            <li>Evaluation benchmarks and standardized datasets</li>
+            <li>Toolkits for multimodal foundation model training and visualization</li>
+            <li>Efficient and sustainable multimodal learning at scale</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-8 flex flex-wrap items-center gap-3 text-sm">
+        <a class="inline-flex items-center gap-2 rounded-lg bg-slate-900 text-white px-4 py-2 hover:bg-slate-800" href="https://www.overleaf.com/latex/templates/arxiv-and-prime-ai-style-template/qdnhqytdqzsc" target="_blank" rel="noopener">Latex Template ↗</a>
+        <a class="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-4 py-2 hover:bg-white" href="https://openreview.net/ysmlm" target="_blank" rel="noopener">OpenReview ↗</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Timeline -->
+  <section id="timeline" class="py-16 bg-slate-100">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="text-2xl font-bold">3. Submissions & Important Dates</h2>
+      <p class="mt-2 text-slate-600 text-sm">Papers ≤ 9 pages (excl. refs/appendix), double‑blind, non‑archival by default.</p>
+      <div class="mt-6 grid gap-4">
+        <div class="rounded-xl bg-white border border-slate-200 p-5">
+          <ul class="space-y-2 text-slate-800">
+            <li><span class="font-semibold">Abstract deadline:</span> yyyy-mm-dd</li>
+            <li><span class="font-semibold">Paper deadline:</span> yyyy-mm-dd</li>
+            <li><span class="font-semibold">Author notification:</span> yyyy-mm-dd</li>
+            <li><span class="font-semibold">Camera‑ready:</span> yyyy-mm-dd</li>
+            <li><span class="font-semibold">Workshop early registration:</span> yyyy-mm-dd</li>
+            <li><span class="font-semibold">Workshop date:</span> yyyy-mm-dd - yyyy-mm-dd</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule -->
+  <!-- 5 Speakers and 45 minutes for panel. -->
+  <!-- Morning coffee break after second talk.. -->
+  <section id="schedule" class="py-16">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="text-2xl font-bold">4. Tentative Schedule</h2>
+      <div class="mt-6 overflow-x-auto">
+        <table class="min-w-full text-left text-sm">
+          <thead>
+            <tr class="text-slate-600">
+              <th class="py-3 pr-6">Time</th>
+              <th class="py-3">Session</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200">
+            <tr><td class="py-3 pr-6">8:30–8:50</td><td class="py-3">Poster setup</td></tr>
+            <tr><td class="py-3 pr-6">8:50–9:00</td><td class="py-3">Opening remarks</td></tr>
+            <tr><td class="py-3 pr-6">9:00–9:50</td><td class="py-3">Invited talk: Invited speaker 1 (Speaker 1 affiliation)</td></tr>
+            <tr><td class="py-3 pr-6">9:50–10:40</td><td class="py-3">Invited talk: Invited speaker 2 (Speaker 2 affiliation)</td></tr>
+            <tr><td class="py-3 pr-6">10:40–11:30</td><td class="py-3">Invited talk: Invited speaker 3 (Speaker 3 affiliation)</td></tr>
+            <tr><td class="py-3 pr-6">11:30–11:50</td><td class="py-3">Discussions & coffee break</td></tr>
+            <tr><td class="py-3 pr-6">11:50–12:55</td><td class="py-3">Poster session</td></tr>
+            <tr><td class="py-3 pr-6">12:55–1:30</td><td class="py-3">Lunch break</td></tr>
+            <tr><td class="py-3 pr-6">1:30–2:20</td><td class="py-3">Invited talk: Invited speaker 4 (Speaker 4 affiliation)</td></tr>
+            <tr><td class="py-3 pr-6">2:20–3:10</td><td class="py-3">Invited talk: Invited speaker 5 (Speaker 5 affiliation)</td></tr>
+            <tr><td class="py-3 pr-6">3:10–4:00</td><td class="py-3">Invited talk: Invited speaker 6 (Speaker 6 affiliation)</td></tr>
+            <tr><td class="py-3 pr-6">4:00–4:50</td><td class="py-3">Contributed talks</td></tr>
+            <tr><td class="py-3 pr-6">4:50–5:00</td><td class="py-3">Discussions & coffee break</td></tr>
+            <tr><td class="py-3 pr-6">5:00–5:30</td><td class="py-3">Panel: If we are doing it.</td></tr>
+            <tr><td class="py-3 pr-6">5:30–5:45</td><td class="py-3">Concluding remarks.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Organizers -->
+  <section id="organizers" class="py-16 bg-white border-y border-slate-200">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl font-bold">5. Organizers</h2>
+      <p class="mt-2 text-slate-600 text-sm">Extended organizers shown where noted.</p>
+
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <!-- Organizer Card Template -->
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <img src="images/Rex_Ying_computer_science.webp" alt="Rex Ying" class="h-42 w-42 object-cover rounded-lg mb-4"/>
+          <a href="https://www.cs.yale.edu/homes/ying-rex/" target="_blank" class="block font-semibold hover:underline">Rex Ying</a>
+          <div class="text-sm text-slate-600">Yale</div>
+        </div>
+
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <img src="images/smita.jpeg" alt="Smita" class="h-42 w-42 object-cover rounded-lg mb-4"/>
+          <a href="http://krishnaswamylab.org" target="_blank" class="block font-semibold hover:underline">Smita Krishnaswamy</a>
+          <div class="text-sm text-slate-600">Yale</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <img src="images/arman.jpg" alt="Arman" class="h-42 w-42 object-cover rounded-lg mb-4"/>
+          <a href="http://armancohan.com" target="_blank" class="block font-semibold hover:underline">Arman Cohan</a>
+          <div class="text-sm text-slate-600">Yale</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <img src="images/Alex_Wong_computer_science.webp" alt="Rex Ying" class="h-42 w-42 object-cover rounded-lg mb-4"/>
+            <a href="https://www.cs.yale.edu/homes/wong-alex/" target="_blank" class="block font-semibold hover:underline">Alex Wong</a>
+            <div class="text-sm text-slate-600">Yale</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+            <img src="images/hiren.jpeg" alt="Hiren Madhu" class="h-42 w-42 object-cover rounded-lg mb-4"/>
+            <a href="http://hirenmadhu.github.io" target="_blank" class="block font-semibold hover:underline">Hiren Madhu</a>
+            <div class="text-sm text-slate-600">Yale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speakers -->
+  <section id="speakers" class="py-16">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl font-bold">6. Invited Speakers & Panelists</h2>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Speaker card template -->
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="aspect-square w-full rounded-lg bg-slate-100 mb-4 flex items-center justify-center text-slate-400">Image</div>
+          <a href="#" target="_blank" class="block font-semibold hover:underline">Invited Speaker 1</a>
+          <div class="text-sm text-slate-600">Affiliation 1</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="aspect-square w-full rounded-lg bg-slate-100 mb-4 flex items-center justify-center text-slate-400">Image</div>
+          <a href="#" target="_blank" class="block font-semibold hover:underline">Invited Speaker 2</a>
+          <div class="text-sm text-slate-600">Affiliation 2</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="aspect-square w-full rounded-lg bg-slate-100 mb-4 flex items-center justify-center text-slate-400">Image</div>
+          <a href="#" target="_blank" class="block font-semibold hover:underline">Invited Speaker 3</a>
+          <div class="text-sm text-slate-600">Affiliation 3</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="aspect-square w-full rounded-lg bg-slate-100 mb-4 flex items-center justify-center text-slate-400">Image</div>
+          <a href="#" target="_blank" class="block font-semibold hover:underline">Invited Speaker 4</a>
+          <div class="text-sm text-slate-600">Affiliation 4</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="aspect-square w-full rounded-lg bg-slate-100 mb-4 flex items-center justify-center text-slate-400">Image</div>
+          <a href="#" target="_blank" class="block font-semibold hover:underline">Invited Speaker 5</a>
+          <div class="text-sm text-slate-600">Affiliation 5</div>
+        </div>
+        <div class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
+          <div class="aspect-square w-full rounded-lg bg-slate-100 mb-4 flex items-center justify-center text-slate-400">Image</div>
+          <a href="#" target="_blank" class="block font-semibold hover:underline">Invited Speaker 6</a>
+          <div class="text-sm text-slate-600">Affiliation 6</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 bg-slate-100">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="text-2xl font-bold">7. FAQ</h2>
+      <div class="mt-6 grid gap-4">
+        <details class="rounded-lg border border-slate-200 bg-white p-5" open>
+          <summary class="font-semibold cursor-pointer">Can I attend virtually?</summary>
+          <p class="mt-2 text-slate-700">All talks will be live‑streamed. Posters are in‑person only; we recommend attending in person if possible.</p>
+        </details>
+        <details class="rounded-lg border border-slate-200 bg-white p-5">
+          <summary class="font-semibold cursor-pointer">What does non‑archival mean?</summary>
+          <p class="mt-2 text-slate-700">Your submission will not appear in formal proceedings or be indexed; you retain the right to publish elsewhere.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Sponsor -->
+  <section id="contact" class="py-16">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="mt-2 text-slate-700">Email us: <code class="bg-slate-100 px-1.5 py-0.5 rounded">hiren.madhu@yale.edu</code></p>
+    </div>
+  </section>
+
+  <section id="sponsor" class="py-16 bg-white border-t border-slate-200">
+    <div class="mx-auto max-w-4xl px-4">
+      <h2 class="text-2xl font-bold">8. Sponsor</h2>
+      <div class="mt-6 flex items-center gap-6">
+        <div class="h-14 w-14 rounded-lg bg-slate-100 flex items-center justify-center text-slate-400">AIJ</div>
+        <p class="text-slate-700">Proudly sponsored by the <strong>Artificial Intelligence Journal (AIJ)</strong>, established in 1970.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 border-t border-slate-200 text-center text-sm text-slate-500">
+    © <span id="y"></span> YSMLM @ Yale 2025
+  </footer>
+
+  <script>
+    // Mobile menu
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn?.addEventListener('click', () => menu?.classList.toggle('hidden'));
+    // Year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
